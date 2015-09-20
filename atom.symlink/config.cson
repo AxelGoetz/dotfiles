@@ -1,10 +1,10 @@
 "*":
   editor:
     showIndentGuide: true
-    fontFamily: "Menlo"
+    fontFamily: "Source Code Pro"
     invisibles: {}
-    fontSize: 15
     softWrapAtPreferredLineLength: true
+    fontSize: 13
   core:
     ignoredNames: [
       ".bundle"
@@ -14,16 +14,8 @@
       "tmp"
       "vendor"
     ]
-    themes: [
-      "unity-ui"
-      "glacier-syntax"
-    ]
     hideGitIgnoredFiles: true
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
-    ]
+    projectHome: "/Users/daniel/Projects"
   "spell-check":
     grammars: [
       "text.plain"
@@ -34,3 +26,9 @@
     showOnStartup: false
   "release-notes":
     viewedVersion: "0.89.0"
+  "language-babel": {}
+  linter:
+    lintOnFly: false
+  "linter-eslint":
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
