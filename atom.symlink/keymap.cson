@@ -1,0 +1,3 @@
+'.workspace .editor:not(.mini)':
+  'shift-alt-up': 'editor:add-selection-above'
+  'shift-alt-down': 'editor:add-selection-below'
