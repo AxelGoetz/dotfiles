@@ -1,6 +1,5 @@
 "*":
   editor:
-    showIndentGuide: true
     fontFamily: "Source Code Pro"
     invisibles: {}
     softWrapAtPreferredLineLength: true
