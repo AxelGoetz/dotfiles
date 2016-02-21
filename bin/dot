@@ -14,3 +14,7 @@ brew update
 
 # Install homebrew packages
 $ZSH/homebrew/install.sh 2>&1
+
+git clone https://github.com/tarruda/zsh-autosuggestions /usr/local/share/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/local/share/zsh-syntax-highlighting
