@@ -152,5 +152,49 @@ then
   fi
 fi
 
+# Vim setup 
+# clone the vim rc and setup
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+# Enable nerdtree
+[ ! -d ~/vim  ] && mkdir -p ~/vim
+[ ! -d ~/vim/plugins  ] && mkdir -p ~/vim/plugins
+git clone https://github.com/scrooloose/nerdtree.git ~/vim/plugins/nerdtree
+
+[ ! -d ~/.vim  ] && mkdir -p ~/.vim
+[! -d ~/.vim/plugin ] && mkdir -p ~/.vim/plugin
+[! -d ~/.vim/colors ] && mkdir -p ~/.vim/colors
+[! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
+
+[! -d ~/.vim/after ] && mkdir -p ~/.vim/after
+[! -d ~/.vim/after/ftplugin ] && mkdir -p ~/.vim/after/ftplugin
+[! -d ~/.vim/after/ftplugin/markdown ] && mkdir -p ~/.vim/after/ftplugin/markdown
+
+# Auto complete brackets
+git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/plugin/auto-pairs
+
+# Setup theme
+git clone git://github.com/altercation/vim-colors-solarized.git ~/vim-colors-solarized
+
+mv ~/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/ 
+rm -rf ~/.vim-colors-solarized
+
+# Clone plugins in bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Actually installing plugins using Vundle.vim
+vim +PluginInstall +qall
+
+# Fancy git diff
+npm install -g diff-so-fancy
+brew install gnu-sed
+
+# Install instant markdown preview
+npm -g install instant-markdown-d
+git clone https://github.com/suan/vim-instant-markdown.git ~/vim-instant-markdown
+
+mv ~/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/after/ftplugin/markdown/
+
 echo ''
 echo '  All installed!'
