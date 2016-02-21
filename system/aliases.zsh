@@ -8,3 +8,7 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias cat="ccat"
+
+alias vim="/usr/local/Cellar/vim/7.4.1257/bin/vim"
