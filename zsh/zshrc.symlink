@@ -39,3 +39,10 @@ do
 done
 
 unset config_files
+
+# Load the syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Load the auto suggestions
+# I have some issues on my machine, which is why I dont use it
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
