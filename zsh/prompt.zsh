@@ -84,7 +84,7 @@ PR_ARROW_CHAR=">"
 
 # The arrow in red (for root) or violet (for regular user)
 function PR_ARROW() {
-    echo "%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
+    echo "%(!.%{$fg[red]%}.%{$fg[green]%})${PR_ARROW_CHAR}%{$reset_color%}"
 }
 
 # Set custom rhs prompt
@@ -123,14 +123,14 @@ function RPR_INFO() {
 # Set RHS prompt for git repositories
 DIFF_SYMBOL="-"
 GIT_PROMPT_SYMBOL=""
-GIT_PROMPT_PREFIX="%{$fg[violet]%}%B(%b%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[violet]%}%B)%b%{$reset_color%}"
+GIT_PROMPT_PREFIX="%{$fg[green]%}%B(%b%{$reset_color%}"
+GIT_PROMPT_SUFFIX="%{$fg[green]%}%B)%b%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[teal]%}%B+NUM%b%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[orange]%}%B-NUM%b%{$reset_color%}"
+GIT_PROMPT_BEHIND="%{$fg[red]%}%B-NUM%b%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg[cyan]%}%Bx%b%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B$DIFF_SYMBOL%b%{$reset_color%}"
 GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B$DIFF_SYMBOL%b%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}%B$DIFF_SYMBOL%b%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[red]%}%B$DIFF_SYMBOL%b%{$reset_color%}"
 GIT_PROMPT_DETACHED="%{$fg[neon]%}%B!%b%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
