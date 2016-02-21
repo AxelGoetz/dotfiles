@@ -1,4 +1,120 @@
-syntax on
+set runtimepath+=~/.vim_runtime
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+" Vim RC Standard
+source ~/.vim_runtime/vimrcs/basic.vim
+source ~/.vim_runtime/vimrcs/filetypes.vim
+source ~/.vim_runtime/vimrcs/plugins_config.vim
+source ~/.vim_runtime/vimrcs/extended.vim
+
+try
+source ~/vim_runtime/my_configs.vim
+catch
+endtry
+
+" I dont like folding
+set nofoldenable
+set foldlevelstart=99
+set foldlevel=99
+
+" Show invisibles
+set listchars=tab:▸\ ,eol:¬
+set list
+
+" Nerdtree config
+autocmd vimenter * NERDTree
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeDirArrows=0
+let g:NERDTreeWinSize=20
+
+
+" Theme config
+try
+let g:solarized_termcolors=256
+colorscheme solarized
+catch
+endtry
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+" Syntax checking config
+set number
+set numberwidth=2
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 2
+let g:syntastic_javascript_checkers = ['jshint']
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+let g:ycm_path_to_python_interpreter="/usr/bin/python"
+
+" Autocomplete config
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#dictionary#dictionaries = {'default' : '', 'vimshell' : $HOME.'/.vimshell_hist','scheme' : $HOME.'/.gosh_completions'}
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+" Github diff config
+set updatetime=250
+
+
+" More autocomplete config
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+set nocompatible
+filetype off 
+
+" Vundle plugins
+" run ':PluginInstall' in order to install these
+" run the same command, every time you add a new one
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'mattn/emmet-vim'
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
+
+call vundle#end() 
+filetype plugin indent on
+
+" Git diff in text editor config
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_enabled = 1
+
+" Git diff in nerd tree config
+let g:NERDTreeUseSimpleIndicator = 1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "+", 
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "+",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"}
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.pyi'
+
