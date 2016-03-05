@@ -29,3 +29,8 @@ alias chromet="chrome --new --args --new-tab"
 alias empty_trash="rm -r ~/.Trash"
 
 alias svenv="source venv/bin/activate"
+
+alias server="python -m SimpleHTTPServer"
+
+alias tmux="tmux -2"
+alias tmux="tmux -u"
