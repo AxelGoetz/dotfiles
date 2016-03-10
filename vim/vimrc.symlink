@@ -106,6 +106,7 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ntpeters/vim-better-whitespace'
 
 Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
 
@@ -132,3 +133,5 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.pyi'
 
 nmap <silent> <C-D> :NERDTreeToggle<CR>
+set spell spelllang=en_gb
+highlight ExtraWhitespace ctermbg=gray
