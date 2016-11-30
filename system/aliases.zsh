@@ -11,4 +11,3 @@ fi
 
 alias cat="ccat"
 
-alias vim="/usr/local/Cellar/vim/7.4.1257/bin/vim"

@@ -10,11 +10,8 @@ alias edit_profile="nano ~/.dotfiles/zsh/aliases.zsh; source ~/.dotfiles/zsh/ali
 
 alias ..='cd ..'
 alias ...='cd ../../'
-alias cdp='cd ~/Projects'
 
-alias ..='cd ..'
-alias ...='cd ../../'
-alias cdp='cd ~/Projects'
+alias s='cd ~/Drive/School'
 
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash

@@ -34,7 +34,7 @@ let g:solarized_termcolors=256
 catch
 endtry
 
-" solarized options 
+" solarized options
 " let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
@@ -92,7 +92,7 @@ if !has("gui_running")
 endif
 
 set nocompatible
-filetype off 
+filetype off
 
 " Vundle plugins
 " run ':PluginInstall' in order to install these
@@ -112,7 +112,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 
 Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
 
-call vundle#end() 
+call vundle#end()
 filetype plugin indent on
 
 " Git diff in text editor config
@@ -122,7 +122,7 @@ let g:gitgutter_enabled = 1
 " Git diff in nerd tree config
 let g:NERDTreeUseSimpleIndicator = 1
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "+", 
+    \ "Modified"  : "+",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
     \ "Renamed"   : "➜",
@@ -138,3 +138,4 @@ nmap <silent> <C-D> :NERDTreeToggle<CR>
 set spell spelllang=en_gb
 highlight ExtraWhitespace ctermbg=gray
 
+let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/'

@@ -56,3 +56,6 @@ if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
 
+eval $(thefuck --alias)
+
+climate weather
